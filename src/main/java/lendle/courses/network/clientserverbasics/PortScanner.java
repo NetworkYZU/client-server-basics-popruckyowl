@@ -20,11 +20,11 @@ public class PortScanner {
         // TODO code application logic here
         for(int i=0; i<=1024; i++){
             //hint: 建立 socket，連結到 i port
-            try(Socket socket=null){
+            try(Socket socket=new Socket("127.0.0.1", i)){
             /////////////////////////////////
                 System.out.println("there is a service on port: "+i);
             }catch(Exception e){
-                
+                System.out.println("hello ha: "+i);
             }
         }
     }
